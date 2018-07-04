@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="app-bar-expand-md fg-white bg-cobalt" data-role="appbar">
+        <a href="#" class="brand no-hover">Pressman ToDo</a>
+        <ul class="app-bar-menu ml-auto">
+            <li id="openCreateUser">
+                <a href="#">
+                    <span class="mif-users mif-2x"></span>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <div class="container-fluid">
+        <table id="todoList">
+            <tbody></tbody>
+        </table>
+        <div class="dialog" id="createUserDialog" data-role="dialog" data-on-close="document.createUserForm.reset();">
+            <div class="dialog-title">ユーザ追加</div>
+            <div class="dialog-content">
+                <form id="createUserForm" name="createUserForm" data-role="validator" action="javascript:">
+                    <div class="form-group">
+                        <label>ユーザ名</label>
+                        <input type="text" data-validate="required" id="createUserName" name="createUserName" required>
+                        <span class="invalid_feedback">
+                            ユーザ名を入力してください。
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div class="dialog-actions">
+                <button type="button" class="button primary">追加</button>
+                <button type="button" class="button js-dialog-close">キャンセル</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
